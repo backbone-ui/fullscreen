@@ -79,6 +79,9 @@
 			} else {
 				el.mozRequestFullScreen();
 			}
+			// add class on target
+			$(el).addClass("ui-fullscreen-active");
+
 			// events
 			el.ondblclick = this.exitFullscreen;
 
@@ -92,13 +95,17 @@
 			//document.getElementById('enter-exit-fs').onclick = exitFullscreen;
 		},
 
-		exitFullscreen: function() {
+		exitFullscreen: function( e ) {
 			//console.log("exitFullscreen()");
 			if (document.mozCancelFullScreen) {
 				document.mozCancelFullScreen();
 			} else {
 				document.webkitCancelFullScreen();
 			}
+			var el = document.querySelector(this.options.targetEl);
+			// remove class
+			$(el).removeClass("ui-fullscreen-active");
+
 			// bind event to the app
 			this.state.fullscreen = false;
 			//app.state.fullscreen = false;

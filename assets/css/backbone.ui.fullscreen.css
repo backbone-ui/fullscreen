@@ -17,3 +17,8 @@
 .ui-fullscreen.default:hover {
 	opacity: 0.8;
 }
+
+.ui-fullscreen-active {
+	min-width: 100%;
+	min-height: 100%;
+}
