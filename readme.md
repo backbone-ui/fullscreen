@@ -38,7 +38,7 @@ These are the varialbes that give you access to a number of features of the plug
 
 A few of the sites using this open source:
 
-[![Stellar Fight](http://appicon.makesit.es/stellarfight.amigame.co)](http://stellarfight.amigame.co)
+[![Stellar Fight](http://appicon.makesit.es/stellarfight.i-ga.me)](http://stellarfight.i-ga.me)
 
 
 ## Credits
