@@ -20,7 +20,8 @@
 		el : '.ui-fullscreen',
 
 		options : {
-			targetEl: "body"
+			targetEl: "body",
+			style: "default"
 		},
 
 		events: {
@@ -30,6 +31,17 @@
 		state: {
 			fullscreen: false
 		},
+
+		initialize: function( options ) {
+			// add ui class
+			$(this.el).addClass("ui-fullscreen");
+			if( this.options.style ){
+				$(this.el).addClass( this.options.style );
+			}
+			return View.prototype.initialize.call( this, options );
+		},
+
+		// Events
 
 		toggle: function() {
 
