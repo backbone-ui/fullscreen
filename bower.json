@@ -1,6 +1,6 @@
 {
-	"name": "backbone.ui.alert",
-	"version": "0.0.1",
+	"name": "backbone.ui.fullscreen",
+	"version": "0.1.0",
 	"description": "A UI element to switch between fullscreen modes",
 	"authors": [
 		"Makis Tracend <makis@makesit.es>"
@@ -20,6 +20,7 @@
 	],
 	"dependencies": {
 		"backbone": "*",
-		"underscore": "*"
+		"underscore": "*",
+		"jquery": "*"
 	}
 }
