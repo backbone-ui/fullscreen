@@ -64,8 +64,11 @@
 
 		// Called whenever the browser exits fullscreen.
 		onFullScreenExit: function() {
-			this.state.fullscreen = false;
 			//console.log("Exited fullscreen!");
+			var el = document.querySelector(this.options.targetEl);
+			// remove class
+			$(el).removeClass("ui-fullscreen-active");
+			this.state.fullscreen = false;
 		},
 
 		// Note: FF nightly needs about:config full-screen-api.enabled set to true.
@@ -104,6 +107,7 @@
 			} else {
 				document.webkitCancelFullScreen();
 			}
+			// rely on onFullScreenExit event instead?
 			var el = document.querySelector(this.options.targetEl);
 			// remove class
 			$(el).removeClass("ui-fullscreen-active");
