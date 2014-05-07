@@ -122,7 +122,7 @@
 	} else {
 		// Register as a named AMD module, used in Require.js
 		if ( typeof define === "function" && define.amd ) {
-			define("backbone.ui.fullscreen", ['underscore', 'backbone'], function () { return Fullscreen; } );
+			//define("backbone.ui.fullscreen", ['underscore', 'backbone'], function () { return Fullscreen; } );
 		}
 	}
 	// If there is a window object, that at least has a document property
