@@ -33,6 +33,7 @@
 		},
 
 		initialize: function( options ) {
+			_.bindAll( this, "onFullScreenEnter", "onFullScreenExit");
 			// add ui class
 			$(this.el).addClass("ui-fullscreen");
 			if( this.options.style ){
@@ -63,6 +64,7 @@
 
 		// Called whenever the browser exits fullscreen.
 		onFullScreenExit: function() {
+			this.state.fullscreen = false;
 			//console.log("Exited fullscreen!");
 		},
 
